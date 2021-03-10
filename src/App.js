@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Statistics from './Statistics/Statistics';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    return (
+        <div>
+            <Statistics  stats={stats} title="Upload Stats"/>
+        </div>
+    )
 }
-
-export default App;
+const stats=[
+    { "id": "id-1", "label": ".docx", "percentage": 22 },
+    { "id": "id-2", "label": ".pdf", "percentage": 4 },
+    { "id": "id-3", "label": ".mp3", "percentage": 17 },
+    { "id": "id-4", "label": ".psd", "percentage": 47 },
+    { "id": "id-5", "label": ".pdf", "percentage": 10 }
+  ]
